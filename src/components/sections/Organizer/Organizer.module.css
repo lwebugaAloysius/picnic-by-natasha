@@ -1,0 +1,57 @@
+.break {
+  display: block;
+}
+.organizer-section {
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.organizer-info-cards {
+  display: grid;
+  gap: 1rem;
+}
+.organizer-info-card-text {
+  color: var(--neutral-white-900);
+}
+
+.hover-card-box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+@media (min-width: 945px) {
+  .organizer-info-cards {
+    grid-template-columns: 1fr 300px 300px;
+    grid-template-rows: 40vh;
+    grid-template-areas:
+      "box-1 box-2 box-4"
+      "box-1 box-3 box-4"
+      "box-1 box-3 .";
+  }
+
+  .hover-card-box-1 {
+    grid-area: box-1;
+  }
+  .hover-card-box-2 {
+    grid-area: box-2;
+  }
+  .hover-card-box-3 {
+    grid-area: box-3;
+  }
+  .hover-card-box-4 {
+    grid-area: box-4;
+  }
+}
+
+@media (617px <= width < 945px) {
+  .organizer-info-cards {
+    grid-template-areas:
+      "box-1 box-2"
+      "box-3 box-4";
+  }
+}

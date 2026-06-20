@@ -1,0 +1,62 @@
+.card-container {
+  position: relative;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (min-width: 945px) {
+  .card-container {
+    height: 100%;
+  }
+}
+
+.card-overlay {
+  padding: 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: all 150ms ease-in-out;
+  /* opacity: 0; */
+}
+
+.card-overlay-info-container {
+  display: grid;
+  gap: 0.5rem;
+  transition: all 150ms ease-in-out;
+  transform: translateY(10px);
+}
+
+.card-overlay-close-btn {
+  border: none;
+  width: 40px;
+  background-color: transparent;
+  aspect-ratio: 1/1;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+  transform: translateY(-10px);
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.shown {
+  opacity: 1;
+
+  .card-overlay-info-container,
+  .card-overlay-close-btn {
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  opacity: 0;
+}

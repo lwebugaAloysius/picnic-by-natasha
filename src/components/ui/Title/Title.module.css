@@ -1,0 +1,25 @@
+.title {
+  font-family: var(--secondary-font);
+}
+
+.white {
+  color: var(--neutral-white-800);
+}
+.black {
+  color: var(--neutral-black-900);
+}
+
+.title-animation {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

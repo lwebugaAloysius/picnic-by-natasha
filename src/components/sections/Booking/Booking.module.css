@@ -1,0 +1,117 @@
+.break {
+  display: block;
+}
+.booking-section {
+  padding: 5rem 1rem;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-block: 5rem;
+  border-radius: 1rem;
+  opacity: 0;
+  transform: translateY(40px);
+}
+@media (min-width: 760px) {
+  .booking-section {
+    grid-template-columns: 1fr 40%;
+  }
+}
+
+.booking-text-container,
+.booking-form {
+  background-color: rgba(252, 252, 248, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.booking-text-container {
+  display: grid;
+  gap: 2rem;
+  cursor: pointer;
+
+  p {
+    color: var(--neutral-white-800);
+    line-height: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+}
+.booking-text-container > * {
+  text-shadow: 0 0 0.4em var(--neutral-white-800);
+}
+
+.booking-form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.booking-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.booking-input {
+  background-color: var(--neutral-white-800);
+  outline: 1px solid var(--neutral-black-900);
+  color: var(--neutral-black-800);
+  border: none;
+  border-radius: 4px;
+  padding: 0.35rem 0.5rem;
+  transition: all 150ms ease-in-out;
+}
+
+.booking-input-group.booking-input-group-btn {
+  margin-top: 1rem;
+  /* background-color: red; */
+}
+
+.booking-input:focus {
+  outline: 3px solid var(--accent-yellow-800);
+}
+
+.error-msg {
+  font-weight: 800;
+  color: red;
+  text-shadow: 0 0 0.4em var(--neutral-pink-800);
+
+  /* color: var(--accent-pink-900); */
+}
+
+.final-form-msg {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--neutral-white-800);
+}
+
+.final-form-msg-error {
+  background-color: rgb(238, 72, 72);
+}
+.final-form-msg-success {
+  background-color: rgb(170, 245, 59);
+}
+
+.form-phoneNumber-group {
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.form-phoneNumber {
+  color: var(--neutral-white-800);
+}
+
+.form-phoneNumber-link {
+  text-decoration: none;
+  color: var(--accent-yellow-800);
+  font-weight: 600;
+  cursor: pointer;
+}

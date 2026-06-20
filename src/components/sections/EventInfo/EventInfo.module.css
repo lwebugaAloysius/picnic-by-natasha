@@ -1,0 +1,160 @@
+.eventInfo-section {
+  min-height: 90vh;
+  padding: 5rem 1rem;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.info-container {
+  position: relative;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+}
+.info-container-overlay {
+  height: 100%;
+  padding: 4rem 2rem;
+  display: flex;
+  gap: 7rem;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(82, 118, 52, 0.3), transparent);
+  border-radius: 1rem;
+}
+.break {
+  display: block;
+}
+
+.info-cards {
+  /* outline: 2px solid orange; */
+  display: grid;
+  gap: 1rem;
+}
+.info-card {
+  background-color: var(--neutral-white-900);
+  border-radius: 5px;
+  padding: 1rem;
+  transition: all 150ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.info-card::after {
+  position: absolute;
+  content: "";
+  display: block;
+  padding: 0.2rem;
+  transition: transform 150ms ease-in-out;
+}
+
+.info-card-time::after,
+.info-card-location::after {
+  transform: scaleX(0);
+}
+.info-card-date::after,
+.info-card-venu::after {
+  transform: scaleY(0);
+}
+
+.info-card-time:hover::after,
+.info-card-location:hover::after {
+  transform: scaleX(1);
+}
+.info-card-date:hover::after,
+.info-card-venu:hover::after {
+  transform: scaleY(1);
+}
+
+.info-card-date:hover {
+  transform: translateX(-5px);
+}
+.info-card.info-card-date::after {
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--accent-pink-900);
+}
+
+.info-card-time:hover {
+  transform: translateY(-5px);
+}
+.info-card.info-card-time::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--accent-orange-900);
+}
+
+.info-card-venu:hover {
+  transform: translateX(5px);
+}
+.info-card.info-card-venu::after {
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: var(--accent-pink-800);
+}
+
+.info-card-location:hover {
+  transform: translateY(5px);
+}
+.info-card.info-card-location::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--accent-orange-900);
+  background-color: var(--accent-green-900);
+}
+
+@media (min-width: 760px) {
+  .info-cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      ". time ."
+      "date time venu"
+      "date location venu"
+      ". location .";
+  }
+  .info-card-date {
+    grid-area: date;
+  }
+  .info-card-time {
+    grid-area: time;
+  }
+  .info-card-venu {
+    grid-area: venu;
+  }
+  .info-card-location {
+    grid-area: location;
+  }
+}
+
+@media (631px <= width < 760px) {
+  .info-cards {
+    grid-template-areas:
+      "date time"
+      "venu location";
+  }
+}
+
+.info-directions-cta {
+  text-decoration: none;
+  color: var(--neutral-white-900);
+  background-color: var(--neutral-black-800);
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  align-self: flex-end;
+  border-radius: 200px;
+  transition: all 150ms ease-in-out;
+}
+
+.info-directions-cta:hover {
+  outline: 2px solid var(--neutral-black-800);
+  background-color: transparent;
+  color: var(--neutral-black-800);
+}
