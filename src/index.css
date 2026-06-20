@@ -75,11 +75,11 @@ select {
 /* ----------------------------------------------------------------------------------- */
 @font-face {
   font-family: "Caveat";
-  src: url("fonts/Caveat/Caveat-VariableFont_wght.ttf");
+  src: url("/fonts/Caveat/Caveat-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "LeagueSpartan";
-  src: url("fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf");
+  src: url("/fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf");
 }
 
 :root {
