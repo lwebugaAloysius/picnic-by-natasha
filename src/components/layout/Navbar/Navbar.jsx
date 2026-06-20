@@ -6,7 +6,7 @@ import closeIcon from "/images/icon-close.svg";
 import Button from "../../ui/Button/Button";
 
 import styles from "./Navbar.module.css";
-import { CSSConstants } from "pdfjs-dist";
+
 
 const navList = [
   {
