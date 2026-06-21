@@ -7,7 +7,6 @@ import Button from "../../ui/Button/Button";
 
 import styles from "./Navbar.module.css";
 
-
 const navList = [
   {
     label: "About",
